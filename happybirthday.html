@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun!</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fbe8e7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        #initial-page, .swiper-container {
+            display: none;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+        }
+        #initial-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .swiper-slide img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .swiper-slide h1 {
+            color: #d33a2c;
+            font-size: 24px;
+        }
+        .swiper-slide p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .btn {
+            background-color: #d33a2c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="initial-page">
+        <h1>Selamat Ulang Tahun, Teh rega!</h1>
+        <button class="btn" onclick="openSlides()">Buka</button>
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="teh rega 1.jpeg" alt="Photo 1">
+                <h1>Happy Birthday teh!</h1>
+                <p>Selamat ulang tahun teh kembaar.</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="teh rega 2.jpeg" alt="Photo 2">
+                <p>Sebenernya gabisa berkalimat untuk mengucapkan, tapi</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="teh rega 4.jpeg" alt="Photo 3">
+                <p>Semoga semua impianmu tercapai, sehat selalu, rezekynya dilancaarkan, apapun yang teh rega doakan semoga terkabul, bertambahnya usia pasti berat sih, but.. You can get through your current age, happily, happily, happily.</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="teh rega 3.jpeg" alt="Photo 4">
+                <p>Katanya kalau ulang tahun itu ada dua rasa, sedih dan senang, sedih nya umur kamu berkurang, senang nya kamu masih diberi kesehatan untuk hari ini.</p>
+                <p>Sekali lagi, Happy birthday yaaak! 
+                    btw photo-photo ini izin aku ambil dari fb. wkwkw
+                </p>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        function openSlides() {
+            document.getElementById('initial-page').style.display = 'none';
+            document.querySelector('.swiper-container').style.display = 'block';
+            var swiper = new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+    </script>
+</body>
+</html>
